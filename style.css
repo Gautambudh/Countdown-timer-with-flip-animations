@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+body {
+    background-image: url("./images/bg-stars.svg");
+    background-color: hsl(234, 17%, 12%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hills-background {
+    position: absolute;
+    bottom: 0;
+    z-index: 22;
+    width: 100%;
+}
+.hills-background img {
+    width: 100%;
+}
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    margin: 1rem 0;
+}
+.time-cards {
+    max-width: 75%;
+}
+.seconds-card, .minutes-card, .hours-card, .days-card {
+    color: hsl(345, 95%, 68%, 0.9);
+    font-size: 6rem;
+    margin: 1rem;
+    position: relative;
+    border-radius: 10px;
+    width: 10rem;
+    height: 10rem;
+    display: inline-flex;
+    flex-direction: column;
+    
+}
+.S-top, .M-top, .H-top, .D-top,
+.S-bottom, .M-bottom, .H-bottom, .D-bottom,
+.S-top-flip.active, .M-top-flip.active, .H-top-flip.active, .D-top-flip.active,
+.S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    line-height: 1;
+    overflow: hidden;
+}
+
+.S-top, .M-top, .H-top, .D-top,
+.S-top-flip, .M-top-flip, .H-top-flip, .D-top-flip {
+    padding:0.40em 0.25em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgba(42,43,64,1);
+}
+.S-bottom, .M-bottom, .H-bottom, .D-bottom,
+.S-bottom-flip, .M-bottom-flip, .H-bottom-flip, .D-bottom-flip {
+    padding:0.26em 0.25em;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(58,60,88,0.9725140056022409);
+    display: flex;
+    align-items: flex-end;
+}
+.S-top-flip, .M-top-flip, .H-top-flip, .D-top-flip {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    padding:0.40em 0.25em;
+    height: 0.75em;
+    line-height: 1;
+    overflow: hidden;
+}
+.S-bottom-flip, .M-bottom-flip, .H-bottom-flip, .D-bottom-flip {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0.25em;
+    height: 0.75em;
+    line-height: 1;
+    overflow: hidden;
+}
+
+.S-top-flip.active, .M-top-flip.active, .H-top-flip.active, .D-top-flip.active {
+    padding:0.40em 0.25em;
+    position: absolute;
+    width: 100%;
+    animation: flip-S-top 450ms ease-in;
+    transform-origin: bottom;
+}
+
+@keyframes flip-S-top {
+    /* to, 50% {
+        transform: rotateX(30deg)
+    } */
+    100% {
+        background-color: rgb(23, 24, 38);
+        transform: rotateX(90deg);
+    }
+    
+}
+
+.S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
+    padding:0.26em 0.25em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-S-bottom 450ms ease-out 400ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    /* perspective: 1500px; */
+}
+
+@keyframes flip-S-bottom {
+    100% {
+        background-color: rgb(38, 40, 63);
+        transform: rotateX(0deg);
+    }
+    
+}
+
+.text {
+    color: hsl(237, 18%, 59%);
+}
+
+
+
+
+
