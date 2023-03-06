@@ -19,18 +19,46 @@ body {
 }
 .hills-background img {
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-icons {
+    position: absolute;
+    z-index: 999;
+    height: 80%;
+    bottom: 0;
+    width: 100%;
+    gap: 2rem;
+}
+/* .footer-icons > img {
+    height: 2rem;
+    width: 2rem;
+} */
+svg {
+    fill: #8385A9;
+}
+svg:hover {
+    fill: hsl(345, 95%, 68%, 0.9);
+    cursor: pointer;
 }
 .container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container > div {
+    z-index: 999;
+    position: relative;
+    margin-bottom: 4rem;
 }
 h1 {
     margin: 1rem 0;
 }
 .time-cards {
-    max-width: 75%;
+    /* max-width: 75%; */
+    /* padding: 0; */
+    width: 100%;
 }
 .seconds-card, .minutes-card, .hours-card, .days-card {
     color: hsl(345, 95%, 68%, 0.9);
@@ -87,7 +115,7 @@ h1 {
     width: 100%;
     position: absolute;
     bottom: 0;
-    padding: 0.25em;
+    padding:0.26em 0.25em;
     height: 0.75em;
     line-height: 1;
     overflow: hidden;
@@ -113,7 +141,7 @@ h1 {
 }
 
 .S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
-    padding:0.26em 0.25em;
+    padding:0.27em 0.25em;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -135,7 +163,69 @@ h1 {
     color: hsl(237, 18%, 59%);
 }
 
+@media screen and ( max-width:981px ) {
 
+    .seconds-card, .minutes-card, .hours-card, .days-card {
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+    
+}
+.container > div {
+    width: 100%;
+}
+h1 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.S-top, .M-top, .H-top, .D-top,
+.S-bottom, .M-bottom, .H-bottom, .D-bottom,
+.S-top-flip.active, .M-top-flip.active, .H-top-flip.active, .D-top-flip.active,
+.S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
+    height: 2.5rem;
+}
+}
+
+@media screen and ( max-width:460px ) {
+
+    .seconds-card, .minutes-card, .hours-card, .days-card {
+    font-size: 1.6rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0;
+    
+}
+.container > div {
+    width: 100%;
+}
+h1 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.S-top, .M-top, .H-top, .D-top,
+.S-bottom, .M-bottom, .H-bottom, .D-bottom,
+.S-top-flip.active, .M-top-flip.active, .H-top-flip.active, .D-top-flip.active,
+.S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
+    height: 1.3rem;
+}
+.time-cards {
+    /* max-width: 75%; */
+    padding: 0;
+    width: 100%;
+}
+.text {
+    font-size: 0.6rem;
+}
+.hills-background img {
+    height: 25vh;
+    width: 100%;
+}
+.footer-icons {
+    height: 70%;
+    gap: 1rem;
+}
+}
 
 
 
