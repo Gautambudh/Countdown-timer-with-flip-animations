@@ -6,16 +6,20 @@
     font-family: 'Epilogue', sans-serif;
 }
 body {
+    position: relative;
     background-image: url("./images/bg-stars.svg");
     background-color: hsl(234, 17%, 12%);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: hidden;
+    height: 100vh;
 }
 .hills-background {
     position: absolute;
     bottom: 0;
     z-index: 22;
     width: 100%;
+    overflow-y: hidden;
 }
 .hills-background img {
     width: 100%;
@@ -25,10 +29,11 @@ body {
 .footer-icons {
     position: absolute;
     z-index: 999;
-    height: 80%;
-    bottom: 0;
+    /* height: 80%; */
+    bottom: 50px;
     width: 100%;
     gap: 2rem;
+    overflow-y: hidden;
 }
 /* .footer-icons > img {
     height: 2rem;
@@ -185,6 +190,9 @@ h1 {
 .S-bottom-flip.active, .M-bottom-flip.active, .H-bottom-flip.active, .D-bottom-flip.active {
     height: 2.5rem;
 }
+.footer-icons {
+    bottom: 30px;
+}
 }
 
 @media screen and ( max-width:460px ) {
@@ -217,12 +225,18 @@ h1 {
 .text {
     font-size: 0.6rem;
 }
+.hills-background {
+    bottom: 0;
+    overflow: hidden;
+}
 .hills-background img {
     height: 25vh;
     width: 100%;
+    overflow: hidden;
 }
 .footer-icons {
-    height: 70%;
+    /* height: 70%; */
+    bottom: 30px;
     gap: 1rem;
 }
 }
